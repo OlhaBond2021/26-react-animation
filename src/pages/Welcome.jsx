@@ -14,8 +14,8 @@ export default function WelcomePage() {
   ); //first array - set of pixels, second array - how to transform img when scrolling, for example we can set opacity
   const yHero = useTransform(scrollY, [0, 200], [0, -150]);
   const opacityHero = useTransform(scrollY, [0, 300, 500], [1, 1, 0]); //first array - set of pixels, second array - how to transform img when scrolling, for example we can set opacity
-  const yText = useTransform(scrollY, [0, 200, 300, 500], [0, 50, 50, 300]);
-  const scaleText = useTransform(scrollY, [0, 300], [1, 1.5]);
+  const yText = useTransform(scrollY, [0, 200, 300, 450], [0, 50, 100, 250]);
+  const scaleText = useTransform(scrollY, [0, 300], [1, 1.2]);
 
   return (
     <>
@@ -25,8 +25,14 @@ export default function WelcomePage() {
           style={{ scale: scaleText, y: yText }}
         >
           <h1>Ready for a challenge?</h1>
-          <Link id="cta-link" to="/challenges">
-            Get Started
+          <Link to="/challenges">
+            <motion.button
+              whileHover={{ scale: 1.1, backgroundColor: "#792cf3" }}
+              transition={{ type: "spring", stiffness: 500 }}
+              className="button"
+            >
+              Get Started
+            </motion.button>
           </Link>
         </motion.div>
         <motion.img

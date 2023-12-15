@@ -63,6 +63,7 @@ body {
 
 #welcome-header-content {
   width: 40rem;
+  max-width: 100%;
   position: absolute;
   top: 30%;
   left: calc(50% - 20rem);
@@ -374,4 +375,30 @@ main {
   background-color: #0f61ef;
   color: #fff;
   font-size: 0.5rem;
+}
+
+@media screen and (max-width: 660px) {
+  #welcome-header-content {
+    width: 20rem;
+    max-width: 100%;
+    position: absolute;
+    top: 30%;
+    left: calc(50% - 10rem);
+    z-index: 1;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  #welcome-header-content {
+    width: 20rem;
+    max-width: 100%;
+    position: absolute;
+    top: 30%;
+    left: calc(50% - 10rem);
+    z-index: 1;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
 }
