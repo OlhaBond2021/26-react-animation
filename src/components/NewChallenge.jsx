@@ -87,14 +87,18 @@ export default function NewChallenge({ onDone }) {
               onClick={() => handleSelectImage(image)}
               className={selectedImage === image ? "selected" : undefined}
             >
-              <img {...image} />
+              <motion.img
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 500 }}
+                {...image}
+              />
             </motion.li>
           ))}
         </motion.ul>
 
         <p className="new-challenge-actions">
           <motion.button
-            whileHover={{ scale: 1.1, backgroundColor: "#792cf3" }}
+            whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 500 }}
             type="button"
             onClick={onDone}
